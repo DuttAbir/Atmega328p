@@ -1,0 +1,13 @@
+void setup() {
+  // put your setup code here, to run once:
+  DDRD = 0xFF;
+
+}
+unsigned char _7SEGMENT[16] = {0xC0,0xF9,0xA4,0xB0,0x99,0x92,0x82,0xF8,0x80,0x90,0x88,0x83,0xC6,0xA1,0x86,0x8E};
+void loop() {
+  // put your main code here, to run repeatedly:
+  for (int i = 0; i<16; i++) {
+    PORTD = _7SEGMENT[i];
+    delay(1500);
+  }
+}
