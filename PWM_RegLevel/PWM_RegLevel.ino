@@ -13,7 +13,7 @@ void setup() {
   */
 
   TCCR1B |= (1<<CS10) | (1<<CS11);
-  TCCR1B &= (~(1<<CS12));       //set prescaler of 64
+  TCCR1B &= (~(1<<CS12));       //set prescaler of 64, freq of pwm 16MHz/64 = 250KHz
 
   DDRB |= (1<<DDB1);       //set pb1 as outout
 
